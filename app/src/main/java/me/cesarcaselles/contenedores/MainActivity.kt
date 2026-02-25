@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -117,4 +118,36 @@ fun TaskCompleted() {
             modifier = Modifier.padding(5.dp)
         )
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun Composable(){
+    Column(modifier = Modifier.fillMaxSize()) {
+        Row(modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier.background(Color.Red).weight(1f).fillMaxSize()) {
+                Text("Text Composabe")
+                Text("Display text and follows the recomended Material Design guidlines"
+                )
+            }
+            Column(modifier = Modifier.background(Color.Green).weight(1f).fillMaxSize()) {
+                Text("Text Composabe")
+                Text("Display text and follows the recomended Material Design guidlines"
+                )
+            }
+        }
+        Row(modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier.background(Color.Yellow).weight(1f).fillMaxSize()) {
+                Text("Text Composabe")
+                Text("Display text and follows the recomended Material Design guidlines"
+                )
+            }
+            Column(modifier = Modifier.background(Color.Blue).weight(1f).fillMaxSize()) {
+                Text("Text Composabe")
+                Text("Display text and follows the recomended Material Design guidlines"
+                )
+            }
+        }
+    }
+
 }
